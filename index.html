@@ -1,0 +1,56 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>inoteSeries</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css" />
+    
+</head>
+
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="light">
+                <ion-title>inoteSeries</ion-title>
+            </ion-toolbar>
+        </ion-header>
+                  <ion-content>
+                        <ion-card style="background-color:rgb(255, 196, 196)">
+                            <img src="./netflix.jpg" />
+                            <ion-card-header>
+                                <ion-card-subtitle>Infoflix</ion-card-subtitle>
+                                <ion-card-title>Noter vos series</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                Quelles sont les meilleurs series de tous les temps, toutes nationalites et tous genres confondus?
+                              </ion-card-content>
+                        </ion-card>
+                <ion-item>
+                    <ion-label position="floating">Nom serie</ion-label>
+                    <ion-input type="text" id="input-design"></ion-input>
+                </ion-item>
+                <ion-list>
+                    <ion-item >
+                        <ion-label>Noter vos series</ion-label>
+                        <ion-select id="input-score" interface="action-sheet">
+                          <ion-select-option value="1">1</ion-select-option>
+                          <ion-select-option value="2">2</ion-select-option>
+                          <ion-select-option value="3">3</ion-select-option>
+                          <ion-select-option value="4">4</ion-select-option>
+                          <ion-select-option value="5" selected>5</ion-select-option>
+                        </ion-select>
+                      </ion-item>
+                </ion-list>
+                    <ion-item>
+                        <ion-list id="listeSeries"></ion-list>
+                    </ion-item>
+        </ion-content>
+        <ion-button margin id="btn-confirm" size="large">Commencer a noter</ion-button>
+    </ion-app>
+    <ion-alert-controller></ion-alert-controller>
+    
+
+    <script src="app.js"></script>
+</body>
